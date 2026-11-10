@@ -2,7 +2,7 @@
 
 **Encrypt and decrypt files and text with a passphrase — the key never leaves your device.**
 
-CipherVault performs authenticated AES-256-GCM encryption with a key derived from your passphrase using PBKDF2-HMAC-SHA256 (200,000 iterations). Because it's GCM, any tampering is detected on decrypt. All processing is in-memory and client-side.
+CipherVault performs authenticated AES-256-GCM encryption with a key derived from your passphrase using PBKDF2-HMAC-SHA256 (600,000 iterations). New encrypted blobs include a format version and work factor; blobs created by the earlier 200,000-iteration version remain decryptable. Because it's GCM, tampering is detected on decrypt. All processing is in-memory and client-side.
 
 ## Highlights
 - **Pure front-end** — HTML, CSS and vanilla JavaScript. No backend, no build step, no Python.
@@ -16,6 +16,9 @@ CipherVault performs authenticated AES-256-GCM encryption with a key derived fro
 
 ## Tech
 Vanilla JavaScript + the Web Crypto API · responsive single-page UI · no dependencies.
+
+## Use limits
+This is a learning project, not an audited storage product. Keep a separate backup of important files, use a strong passphrase, and verify that a decrypted result is usable before deleting the original.
 
 ## License
 MIT © 2025 Harsha Malepati
